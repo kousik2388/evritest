@@ -305,6 +305,27 @@ body{background:var(--bg);color:var(--navy);font-family:'Poppins',sans-serif;ove
 }
 .work-card-bg.skull{background:linear-gradient(135deg,#0a0e1a 0%,#1a2a4a 60%,#0d1b3d 100%);}
 .work-card-bg.divres{background:linear-gradient(135deg,#1a0d0d 0%,#3d1a1a 60%,#2d1010 100%);}
+.work-card-bg.superstar{background:linear-gradient(135deg,#0d2b1a 0%,#0d3d25 60%,#0a2a1a 100%);}
+.work-section-label{
+  display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;
+}
+.work-section-label-text{
+  font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--muted);white-space:nowrap;
+}
+.work-section-label-line{
+  flex:1;height:1px;background:var(--border);
+}
+.work-section-label-badge{
+  font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  padding:0.25rem 0.7rem;border-radius:20px;white-space:nowrap;
+}
+.work-section-label-badge.founder{
+  background:rgba(255,211,77,0.12);border:1px solid rgba(255,211,77,0.3);color:var(--yellow);
+}
+.work-section-label-badge.studio{
+  background:rgba(47,209,161,0.12);border:1px solid rgba(47,209,161,0.3);color:var(--mint);
+}
 .work-card-deco{
   position:absolute;inset:0;pointer-events:none;
   display:flex;align-items:center;justify-content:center;
@@ -1033,6 +1054,47 @@ body.dark .bottom-nav-item { color: var(--muted); }
 
   <section class="sec-pad" style="background:var(--bg)">
     <div class="container">
+      <!-- ── Evritest Work ── -->
+      <div class="work-section-label fi">
+        <span class="work-section-label-text">Evritest Work</span>
+        <span class="work-section-label-badge studio">Studio Project</span>
+        <div class="work-section-label-line"></div>
+      </div>
+      <p class="fi" style="font-size:0.85rem;color:var(--muted);margin-bottom:1.8rem;margin-top:-0.5rem;">10 games shipped across browser, prototype, and Android platforms. Full-cycle QA — test planning, regression, and release validation on every title.</p>
+
+      <div class="work-grid fi">
+        <div class="work-card" onclick="window.open('https://superstargames.netlify.app','_blank')" style="cursor:pointer;">
+          <div class="work-card-bg superstar"></div>
+          <div class="work-card-deco">🌟</div>
+          <div class="work-card-inner">
+            <span class="work-card-tag">Superstar Games · Founder's Studio</span>
+            <h3>Superstar Games <span style="font-size:0.8rem;opacity:0.5;">↗</span></h3>
+            <p>10 shipped titles across browser, prototype, and Android. Sole developer and QA — from test planning to release. Every build verified end-to-end before going live.</p>
+            <div class="work-card-meta">
+              <div class="work-meta-item"><div class="work-meta-n">10</div><div class="work-meta-l">Games Shipped</div></div>
+              <div class="work-meta-item"><div class="work-meta-n">3</div><div class="work-meta-l">Platforms</div></div>
+              <div class="work-meta-item"><div class="work-meta-n">Solo</div><div class="work-meta-l">Dev + QA</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card" style="background:transparent;box-shadow:none;border:1px dashed var(--border);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;padding:2rem;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;">△</div>
+            <div style="font-size:0.8rem;font-weight:700;color:var(--mint);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem;">Your Game Here</div>
+            <p style="font-size:0.78rem;color:var(--muted);line-height:1.6;">Evritest is actively taking on new QA partners. Indie, mid-size, or live service — let's talk.</p>
+            <button class="btn-cta" style="margin-top:1.2rem;font-size:0.78rem;padding:0.6rem 1.4rem;" onclick="go('contact')">Start the Conversation ✓</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Founder's Track Record ── -->
+      <div class="work-section-label fi" style="margin-top:4rem;">
+        <span class="work-section-label-text">Founder's Track Record</span>
+        <span class="work-section-label-badge founder">Pre-Evritest · AAA</span>
+        <div class="work-section-label-line"></div>
+      </div>
+      <p class="fi" style="font-size:0.85rem;color:var(--muted);margin-bottom:1.8rem;margin-top:-0.5rem;">Before Evritest existed, this is what shipped. The QA experience behind every Evritest engagement.</p>
+
       <div class="work-grid fi">
         <div class="work-card">
           <div class="work-card-bg skull"></div>
@@ -1052,7 +1114,7 @@ body.dark .bottom-nav-item { color: var(--muted); }
           <div class="work-card-bg divres"></div>
           <div class="work-card-deco">🎯</div>
           <div class="work-card-inner">
-            <span class="work-card-tag">Ubisoft · 2023</span>
+            <span class="work-card-tag">Ubisoft · 2026</span>
             <h3>The Division Resurgence</h3>
             <p>Free-to-play mobile shooter. QA across Android, iOS, and PC. Monetisation flow validation, performance testing on low-end devices, and live-ops quality verification.</p>
             <div class="work-card-meta">
@@ -1064,7 +1126,7 @@ body.dark .bottom-nav-item { color: var(--muted); }
         </div>
       </div>
 
-      <div style="margin-top:3rem" class="fi">
+      <div style="margin-top:2.5rem" class="fi">
         <div class="work-detail">
           <h3>What QA looked like on these titles</h3>
           <p>Both titles shipped under tight live-service timelines with weekly patch cycles. QA had to move at dev velocity while maintaining zero tolerance for P1 issues reaching players. Here's how that worked in practice:</p>
@@ -1192,7 +1254,7 @@ body.dark .bottom-nav-item { color: var(--muted); }
           <h2 class="sec-h">Get in touch</h2>
           <p>Whether you need a full QA plan or just want to talk through what your game needs — I'm available and responsive.</p>
           <div class="contact-item"><span class="ci-icon">✉️</span><div class="ci-body"><h4>Email</h4><p><a href="mailto:kousik2371988@gmail.com">kousik2371988@gmail.com</a></p></div></div>
-          <div class="contact-item"><span class="ci-icon">💼</span><div class="ci-body"><h4>LinkedIn</h4><p><a href="https://linkedin.com/in/kousikkarthikeyan" target="_blank">linkedin.com/in/kousikkarthikeyan</a></p></div></div>
+          <div class="contact-item"><span class="ci-icon">💼</span><div class="ci-body"><h4>LinkedIn</h4><p><a href="https://linkedin.com/company/evritest" target="_blank">linkedin.com/company/evritest</a></p></div></div>
           <div class="contact-item"><span class="ci-icon">🌐</span><div class="ci-body"><h4>Portfolio</h4><p><a href="https://kousik2388.github.io" target="_blank">kousik2388.github.io</a></p></div></div>
           <div class="contact-item"><span class="ci-icon">📍</span><div class="ci-body"><h4>Location</h4><p>Singapore · Remote-friendly · Async</p></div></div>
         </div>
@@ -1314,7 +1376,7 @@ body.dark .bottom-nav-item { color: var(--muted); }
       <h5>Connect</h5>
       <ul>
         <li><a href="mailto:kousik2371988@gmail.com">Email</a></li>
-        <li><a href="https://linkedin.com/in/kousikkarthikeyan" target="_blank">LinkedIn</a></li>
+        <li><a href="https://linkedin.com/company/evritest" target="_blank">LinkedIn</a></li>
         <li><a href="https://kousik2388.github.io" target="_blank">Portfolio</a></li>
       </ul>
     </div>
@@ -1322,7 +1384,7 @@ body.dark .bottom-nav-item { color: var(--muted); }
   <div class="footer-bottom">
     <span class="foot-copy">&copy; 2026 Evritest &middot; Game QA Studio &middot; Singapore</span>
     <div class="foot-soc">
-      <a href="https://linkedin.com/in/kousikkarthikeyan" target="_blank">in</a>
+      <a href="https://linkedin.com/company/evritest" target="_blank">in</a>
       <a href="mailto:kousik2371988@gmail.com">✉</a>
     </div>
   </div>
